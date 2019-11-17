@@ -13,10 +13,10 @@
   <title>Blog Home - Start Bootstrap Template</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href={{ url("vendor/bootstrap/css/bootstrap.min.css") }} rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/blog-home.css" rel="stylesheet">
+  <link href={{ url("css/blog-home.css") }} rel="stylesheet">
 
 </head>
 
@@ -192,8 +192,8 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src={{ url("vendor/jquery/jquery.min.js") }}></script>
+  <script src={{ url("vendor/bootstrap/js/bootstrap.bundle.min.js") }}></script>
 
 </body>
 
