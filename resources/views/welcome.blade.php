@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel Training</title>
+        <title>Acap's Laravel Training</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -81,7 +81,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Acap's Laravel Training
+                    <a href="{{route('blogs')}}">
+                        Acap's Laravel Training
+                    </a> 
                 </div>
 <!-- 
                 <div class="links">

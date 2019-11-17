@@ -40,26 +40,11 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
-        //Method 1
-        $blog =  new Blog();
-        $blog->title = $request->get('title');
-        $blog->body = $request->get('body');
-        $blog->save();
-
-        //Method 2 - Mass assignable
-       //$blog = Blog::create($request->only('title', 'body'));
-
-        //Method 1
-        // $user = auth()->user();
-        // $blog->user()->associate($user);
-        // $article->save();
-        //Method 2
         $user = auth()->user();
-        $user->blogs()->create($request->only('title','body'));
+        $blog = $user->blogs()->create($request->only('title', 'body'));
+        
+        return redirect()->route('blogs')->with(['alert-type' => 'alert-success','alert'=> 'Your blog saved']);
 
-        //return view('blogs.index')
-        return redirect()->route('blog:index')->with(['alert-type' => 'alert-success','alert'=> 'Your blog saved']);
     }
 
     /**
