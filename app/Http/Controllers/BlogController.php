@@ -43,7 +43,7 @@ class BlogController extends Controller
         $user = auth()->user();
         $blog = $user->blogs()->create($request->only('title', 'body'));
         
-        return redirect()->route('blogs')->with(['alert-type' => 'alert-success','alert'=> 'Your blog saved']);
+        return redirect()->route('blog:index')->with(['alert-type' => 'alert-success','alert'=> 'Your blog saved']);
 
     }
 
