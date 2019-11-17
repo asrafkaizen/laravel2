@@ -19,7 +19,7 @@ class BlogController extends Controller
         $blogs = Blog::paginate(5);
         //dd($blogs);
         // dalam folder index.blade.php    
-        return view('blogs.index')->with(compact('blog:index'));
+        return view('blogs.index')->with(compact('blogs'));
     }
 
     /**
