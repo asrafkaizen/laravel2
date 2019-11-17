@@ -38,3 +38,4 @@ Route::group([
 
 //Route::view('/','template.home');
 Route::get('/', 'PublicController@index');
+Route::get('/{blog}', 'PublicController@show')->name('public:show');

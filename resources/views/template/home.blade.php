@@ -68,7 +68,7 @@
           <div class="card-body">
             <h2 class="card-title">{{$blog->title}}</h2>
             <p class="card-text">{{$blog->body}}</p>
-            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            <a href="{{ route('public:show', $blog)}}" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             {{ $blog->created_at->diffForHumans()}}

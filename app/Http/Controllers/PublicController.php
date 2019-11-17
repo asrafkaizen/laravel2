@@ -12,5 +12,10 @@ class PublicController extends Controller
         return view('template.home')->with(compact('blogs'));
     }
 
+    public function show(Blog $blog)
+    {
+        return view('template.post')->with(compact('blog'));
+    }
+
 
 }
